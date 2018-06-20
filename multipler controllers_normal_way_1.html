@@ -1,0 +1,25 @@
+<div ng-app="myApp">
+<div ng-controller="myCtrl1">
+{{ firstName + " " + lastName }}
+</div>
+<p>baba black sheep</p>
+<div ng-controller="myCtrl2">
+{{kkl}}
+</div>
+
+</div>
+
+<script>
+var app = angular.module("myApp", []);
+app.controller("myCtrl1", function($scope) {
+    $scope.firstName = "John";
+    $scope.lastName = "Doe";
+});
+app.controller("myCtrl2", function($scope) {
+    $scope.kkl = 3+2;
+});
+
+</script>
+
+</body>
+</html>

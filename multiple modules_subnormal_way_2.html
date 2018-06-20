@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp">
+<div ng-controller="myCtrl1">
+{{ firstName + " " + lastName }}
+</div>
+<p>baba black sheep</p>
+<div ng-controller="myCtrl2">
+{{kkl}}
+</div>
+
+</div>
+
+<script>
+var sub1 = angular.module('sub1',[]);
+var sub2a = angular.module('sub2a',[]);
+var app = angular.module("myApp", ['sub1','sub2a']);
+sub1.controller("myCtrl1", function($scope) {
+    $scope.firstName = "John";
+    $scope.lastName = "Doe";
+});
+sub2a.controller("myCtrl2", function($scope) {
+    $scope.kkl = 3+2;
+});
+
+</script>
+
+</body>
+</html>
